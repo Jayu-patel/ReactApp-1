@@ -1,31 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const User=()=>{
     const [post, setPost] = useState({})
+    const [load, setLoad] = useState(false)
+    const navigate = useNavigate()
     const params = useParams()
     const {id} = params
+    console.log(params)
 
 
     useEffect(()=>{
         axios.get(`https://dummyjson.com/users/${id}`).then(
             res => {
                 setPost(res.data)
+                setLoad(true)
             }
         ).catch((e)=>{
             console.log("User not found",e)
         })
     },[id])
     
+    const goBack=()=>{
+        navigate("/user")
+    }
     return(
+        load ? 
         <div className="user-box ind-user">
             <div className="sec1">
-            <NavLink to="/user">
-                <button><i className="fa-solid fa-arrow-left"></i> Back</button>
-            </NavLink>
+                <button onClick={()=>goBack()}><i className="fa-solid fa-arrow-left"></i> Back</button>
                 <div className="image">{
                     post ? <img src={post.image} alt="" /> : <div>j</div>
                 }
@@ -43,6 +47,18 @@ const User=()=>{
                     <h2>Company :  {post.company?.name}</h2>
                     <h2>Department :  {post.company?.department}</h2>
                 </div>
+            </div>
+        </div>: 
+        <div className="spin">
+            <div className="lds-roller">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
     )

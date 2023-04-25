@@ -1,6 +1,7 @@
-import React from "react";
+import React, {memo} from "react";
 
 const Home=()=>{
+    console.log("render home")
     return(
         <div className="home home-box">
             <h1>Home Page</h1>
@@ -10,4 +11,4 @@ const Home=()=>{
     )
 }
 
-export default Home
+export default memo(Home)

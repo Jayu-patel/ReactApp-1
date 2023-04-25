@@ -17,7 +17,7 @@ export const Login=()=>{
 
                 <div>
                 <label>Password</label>
-                <input type="passowrd" placeholder="Enter password"/>
+                <input type="password" placeholder="Enter password"/>
                 </div>
 
                 <button id="last3">Submit</button>

@@ -1,0 +1,53 @@
+@media (width <= 800px){
+    .home-box{
+      height: auto;
+    }
+    .home,.userbox{
+      padding: 5px;
+      padding-top: 25px;
+    }
+    .home h1, .user-box h1{
+      padding-top: 10px;
+      padding-bottom: 20px;
+      font-size: 3rem;
+    }
+    .ind-user{
+      height: auto;
+      flex-direction: column;
+    }
+    .user-box{
+      width: 90%;
+    }
+    .sec2{
+      width: 100%;
+      margin: 0 auto;
+    }
+    .all-user{
+      height: auto;
+    }
+    .navbar{
+      flex-direction: column;
+    }
+    .nav a.active::after{
+      height: 4px;
+    }
+    .image{
+      width: 190px;
+      height: 220px;
+    }
+
+    .cards{
+      width: 90%;
+      height: 60vh;
+    }
+  }
+  @media (width < 430px){
+    .email{
+      display: none;
+    }
+  }
+  @media (width > 800px) and (height < 450px){
+    .home-box{
+      height: auto;
+    }
+  }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 
@@ -8,8 +8,6 @@ const User=()=>{
     const navigate = useNavigate()
     const params = useParams()
     const {id} = params
-    console.log(params)
-
 
     useEffect(()=>{
         axios.get(`https://dummyjson.com/users/${id}`).then(

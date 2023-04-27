@@ -1,6 +1,8 @@
 :root {
-    --main-color: #ecf0f1;
-    --point-color: white;
+    /* --main-color: #ecf0f1;
+    --point-color: white; */
+    --main-color: black;
+    --point-color: black;
     --size: 5px;
   }
   

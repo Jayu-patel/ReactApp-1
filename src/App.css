@@ -7,7 +7,7 @@
 /*Navbar*/
 body{
   color: white;
-  background: black;
+  background: white;
   font-family: 'Ubuntu', sans-serif
 }
 .navbar{
@@ -21,7 +21,7 @@ body{
   position: sticky;
   top: 0;
   overflow: hidden;
-  box-shadow: 2px 8px 4px black;
+  box-shadow: 1px 1px 5px 3px black;
 }
 .logo{
   flex: 3;
@@ -206,15 +206,20 @@ body{
 /*//////////////////////////// CAT /////////////////////////////////*/
 .cards{
   width: 40%;
-  margin: 80px auto 0 auto;
+  margin: 40px auto 0 auto;
 
-  height: 70vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
+
+  box-shadow: 1px 1px 3px 1px black;
+}
+.cards:first-child{
+  margin-top: 20px
 }
 .image2{
-  flex: 9;
-  height: 90%;
+  flex: 8;
+  height: 80%;
   width: 100%;
 }
 .detail{
@@ -222,8 +227,8 @@ body{
   width: 100%;
 
   display: flex;
-  background: white;
-  color: black;
+  color: rgba(53, 0, 211, 0.9);
+  background: rgba(240, 240, 240, 0.9);
 }
 .detail div{
   flex: 1;
@@ -244,10 +249,26 @@ body{
 
 <i class="fa fa-share" aria-hidden="true"></i>
 */
-
-@media (width <= 768px){
-  .cards{
-    width: 90%;
-    height: 60vh;
-  }
+.head{
+  flex: 1;
+  background: rgba(53, 0, 211, 0.9);
+  display: flex;
+  padding: 5px;
+}
+.head img{
+  width: 100%;
+  background: white;
+}
+.head-img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.head-detail{
+  margin: 10px 0 0 10px;
+}
+.heart{
+  color: white;
+  text-shadow: -2px 0 rgba(53, 0, 211, 0.9), 0 2px rgba(53, 0, 211, 0.9), 2px 0 rgba(53, 0, 211, 0.9), 0 -2px rgba(53, 0, 211, 0.9);
 }

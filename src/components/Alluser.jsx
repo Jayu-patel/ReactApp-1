@@ -1,24 +1,11 @@
-import React from "react";
-import { useEffect, useState} from "react";
-import axios from "axios";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AppContext } from "./context";
 
 const Alluser=()=>{
 
-    const [posts, setPosts] = useState([])
-    const [load, setLoad] = useState(false)
-
-    useEffect(()=>{
-        axios.get(`https://dummyjson.com/users`).then(
-            res => {
-                setPosts(res.data.users)
-                setLoad(true)
-            }
-        ).catch((e)=>{
-            console.log("User not found")
-        })
-    },[load])
-    // "/users/jay"
+    const {posts , load} = useContext(AppContext)
+    
     return (
       load ? 
       <div className="user-box use">

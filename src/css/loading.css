@@ -5,7 +5,9 @@
     --point-color: black;
     --size: 5px;
   }
-  
+  .update{
+      width: 10%;
+}
   .loader {
     overflow: hidden;
     width: 100%;
